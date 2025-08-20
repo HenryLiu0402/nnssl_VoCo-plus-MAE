@@ -354,6 +354,7 @@ class VoCoTrainer_BS8_lr_1e2_500ep(VoCoTrainer):
         super().__init__(plan, configuration_name, fold, pretrain_json, device)
         self.total_batch_size = 8
         self.initial_lr = 1e-2
+        self.weight_decay = 3e-5
         self.num_epochs = 500
 
 class VoCoTrainer_BS4_lr_1e2(VoCoTrainer):
