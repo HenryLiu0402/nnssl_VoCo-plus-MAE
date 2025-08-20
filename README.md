@@ -15,13 +15,13 @@ Through these experiments, we derived the current results reported below.
 **CUDA:** 12.4  
 **PyTorch:** 2.6.0+cu124  
 
-## Pretraining Straetegy
+## Pretraining Strategy
 Our final pretraining strategy consists of a two-stage pipeline:  
-### Stage 1–VoCo Pretraining (500 epochs, all modalities)
+### Stage 1: VoCo Pretraining (500 epochs, all modalities)
 We first apply Volume Contrastive Learning (VoCo) on the full OpenMind dataset, including all available MRI modalities.
 This allows the model to learn from a broad range of contrasts, which maximizes representation diversity and stability, and improves generalization, especially for classification tasks, through contrastive learning.
 
-### Stage 2–MAE Pretraining (500 epochs, filtered modalities)
+### Stage 2: MAE Pretraining (500 epochs, filtered modalities)
 
 We then continue with Masked Autoencoder (MAE) pretraining on a filtered subset of modalities **("T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI")**, which are most relevant to downstream segmentation and classification tasks.
 MAE promotes fine-grained feature learning by reconstructing masked inputs, which better supports the requirements of segmentation.  
