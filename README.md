@@ -43,7 +43,7 @@ num_epochs = 500
 filtered modalities: "T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI"
 
 ## Example
-```bash
+``` bash
 #set environment variables
 export nnssl_raw=/NFS/dataset/openmind/OpenMind/nnssl_raw
 export nnssl_preprocessed=/NFS/dataset/openmind/OpenMind/nnssl_preprocessed
