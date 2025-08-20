@@ -9,7 +9,8 @@ We compared their individual performance, different pre-training orders (MAE→V
 Through these experiments, we derived the current results reported below.
 
 ## Environment
-GPU: NVIDIA RTX A6000、NVIDIA TITAN RTX  
+GPU1: NVIDIA RTX A6000 (NVIDIA TITAN RTX)  
+RAM: 128G (64G)
 CUDA: 12.4  
 Python: 3.10.12  
 PyTorch: 2.6.0+cu124  
@@ -41,18 +42,29 @@ num_epochs = 500
 filtered modalities: "T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI"
 
 ## Example
-```
-# MAE pretraining (filtered dataset)
-nnssl_train 745 onemmiso \
-  -tr BaseMAETrainer_BS4_filtered_1000ep \
-  -p nnsslPlans
+```bash
+#set environment variables
+export nnssl_raw=/NFS/dataset/openmind/OpenMind/nnssl_raw
+export nnssl_preprocessed=/NFS/dataset/openmind/OpenMind/nnssl_preprocessed
+export nnssl_results=/NFS/dataset/openmind/OpenMind/nnssl_results
+echo $nnssl_raw
+echo $nnssl_preprocessed
+echo $nnssl_results
 
+#Preprocessing the data
+'''same process as nnssl "Preprocessing the data" '''
 # VoCo pretraining (all dataset)
 nnssl_train 745 onemmiso \
-  -pretrained_weights ./checkpoint_mae.pth \
-  -tr VoCoTrainer_BS4_lr_1e2_wd_3e4 \
+  -tr VoCoTrainer_BS8_lr_1e2_500ep \
   -p nnsslPlans
-```bash
+
+# MAE pretraining (filtered dataset)
+nnssl_train 745 onemmiso \
+  -pretrained_weights /NFS/dataset/openmind/OpenMind/nnssl_results/Dataset745_OpenMind/VoCoTrainer_BS8_lr_1e2_500ep__nnsslPlans__onemmiso/fold_all/checkpoint_final.pth \
+  -tr BaseMAETrainer_BS4_filtered_500ep \
+  -p nnsslPlans
+
+```
 
 ## License
 This project is based on [nnssl (MIC-DKFZ)](https://github.com/MIC-DKFZ/nnssl)
