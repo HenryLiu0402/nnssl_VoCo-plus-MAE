@@ -9,11 +9,11 @@ We compared their individual performance, different pre-training orders (MAE→V
 Through these experiments, we derived the current results reported below.
 
 ## Environment
-GPU1: NVIDIA RTX A6000 (NVIDIA TITAN RTX)  
-RAM: 128G (64G)
-CUDA: 12.4  
-Python: 3.10.12  
-PyTorch: 2.6.0+cu124  
+**GPU:** NVIDIA RTX A6000 (NVIDIA TITAN RTX)  
+**RAM:** 128G (64G)
+**CUDA:** 12.4  
+**Python:** 3.10.12  
+**PyTorch:** 2.6.0+cu124  
 
 ## Pretraining Straetegy
 Our final pretraining strategy consists of a two-stage pipeline:  
