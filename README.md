@@ -41,7 +41,7 @@ num_epochs = 500
 filtered modalities: "T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI"
 
 ## Example
-'''
+\\\
 # MAE pretraining (filtered dataset)
 nnssl_train 745 onemmiso \
   -tr BaseMAETrainer_BS4_filtered_1000ep \
@@ -52,7 +52,7 @@ nnssl_train 745 onemmiso \
   -pretrained_weights ./checkpoint_mae.pth \
   -tr VoCoTrainer_BS4_lr_1e2_wd_3e4 \
   -p nnsslPlans
-'''bash
+\\\bash
 
 ## License
 This project is based on [nnssl (MIC-DKFZ)](https://github.com/MIC-DKFZ/nnssl)
