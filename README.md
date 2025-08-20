@@ -28,14 +28,15 @@ MAE promotes fine-grained feature learning by reconstructing masked inputs, whic
 By focusing on key modalities, we reduce noise from less common or unrelated sequences, allowing the model to concentrate its representation capacity on the most task-relevant contrasts.
 
 ## Hyperparameter Settings
-For VoCo pre-training stage:  
+### For VoCo pre-training stage:  
 batch_size = 8  
 initial_lr = 1e-2  
 weight_decay = 3e-5  
 num_epochs = 500  
 
-For MAE pre-training stage:  
+### For MAE pre-training stage:  
 batch_size = 4  
+initial_lr = 1e-2  
 patch_size = (160, 160, 160)  
 mask ratio: 0.75  
 num_epochs = 500  
