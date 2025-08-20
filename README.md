@@ -43,6 +43,7 @@ num_epochs = 500
 filtered modalities: "T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI"
 
 ## Example
+
 ```bash
 #set environment variables
 export nnssl_raw=/NFS/dataset/openmind/OpenMind/nnssl_raw
@@ -65,7 +66,7 @@ nnssl_train 745 onemmiso \
   -pretrained_weights /NFS/dataset/openmind/OpenMind/nnssl_results/Dataset745_OpenMind/VoCoTrainer_BS8_lr_1e2_500ep__nnsslPlans__onemmiso/fold_all/checkpoint_final.pth \
   -tr BaseMAETrainer_BS4_filtered_500ep \
   -p nnsslPlans
-
+```
 
 ## License
 This project is based on [nnssl (MIC-DKFZ)](https://github.com/MIC-DKFZ/nnssl)
