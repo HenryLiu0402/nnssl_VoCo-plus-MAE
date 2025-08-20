@@ -8,10 +8,10 @@ We compared their individual performance, different training orders (MAE→VoCo 
 Through these experiments, we derived the current results reported below.
 
 ## Environment
-GPU: NVIDIA RTX A6000、NVIDIA TITAN RTX
-CUDA: 12.4
-Python: 3.10.12
-PyTorch: 2.6.0+cu124
+GPU: NVIDIA RTX A6000、NVIDIA TITAN RTX  
+CUDA: 12.4  
+Python: 3.10.12  
+PyTorch: 2.6.0+cu124  
 
 
 ## License
