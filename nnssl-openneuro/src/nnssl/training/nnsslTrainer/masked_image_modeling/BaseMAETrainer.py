@@ -672,7 +672,7 @@ class BaseMAETrainer_BS8_IQS3_5_FA(BaseMAETrainer):
         self.num_val_iterations_per_epoch = 5
 
 
-############################# OTHERS #############################
+############################# My Trainer #############################
 
 class BaseMAETrainer_BS4_filtered_500ep(BaseMAETrainer):
     def __init__(
@@ -685,6 +685,7 @@ class BaseMAETrainer_BS4_filtered_500ep(BaseMAETrainer):
     ):
         super().__init__(plan, configuration_name, fold, pretrain_json, device)
         self.total_batch_size = 4
+        self.initial_lr = 1e-2
         self.iimg_filters.append(ModalityFilter(valid_modalities=["T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI"]))
         self.num_epochs = 500
 
@@ -714,6 +715,10 @@ class BaseMAETrainer_BS4(BaseMAETrainer):
         super().__init__(plan, configuration_name, fold, pretrain_json, device)
         self.total_batch_size = 4
         self.num_epochs = 500
+
+
+############################# OTHERS #############################
+
 
 class BaseMAETrainer_BS8_100ep(BaseMAETrainer):
     def __init__(
