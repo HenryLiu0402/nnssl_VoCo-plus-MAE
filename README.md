@@ -52,7 +52,8 @@ echo $nnssl_preprocessed
 echo $nnssl_results
 
 #Preprocessing the data
-'''same process as nnssl "Preprocessing the data" '''
+ # >> same process as nnssl "Preprocessing the data"
+
 # VoCo pretraining (all dataset)
 nnssl_train 745 onemmiso \
   -tr VoCoTrainer_BS8_lr_1e2_500ep \
