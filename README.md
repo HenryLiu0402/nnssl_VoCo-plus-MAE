@@ -10,9 +10,9 @@ Through these experiments, we derived the current results reported below.
 
 ## Environment
 **GPU:** NVIDIA RTX A6000 (NVIDIA TITAN RTX)  
-**RAM:** 128G (64G)
-**CUDA:** 12.4  
+**RAM:** 128G (64G)  
 **Python:** 3.10.12  
+**CUDA:** 12.4  
 **PyTorch:** 2.6.0+cu124  
 
 ## Pretraining Straetegy
