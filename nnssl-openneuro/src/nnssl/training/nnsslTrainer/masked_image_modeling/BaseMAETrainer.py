@@ -701,6 +701,7 @@ class BaseMAETrainer_BS4_filtered_1000ep(BaseMAETrainer):
         super().__init__(plan, configuration_name, fold, pretrain_json, device)
         self.total_batch_size = 4
         self.iimg_filters.append(ModalityFilter(valid_modalities=["T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI"]))
+        self.initial_lr = 1e-2
         self.num_epochs = 1000
 
 class BaseMAETrainer_BS4(BaseMAETrainer):
