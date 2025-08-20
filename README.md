@@ -4,9 +4,9 @@ ResEnc-L network architecture
 
 ## Description
 We aim to balance performance across segmentation and classification tasks.
-To this end, we explored two SSL methods: Masked Autoencoder (MAE), which shows strong performance in segmentation tasks, and Volume Contrastive Learning (VoCo), which is more effective in classification settings.
+For this purpose, we explored two SSL methods: Masked Autoencoder (MAE), which shows strong performance in segmentation tasks, and Volume Contrastive Learning (VoCo), which is more effective in classification settings.
 We compared their individual performance, different pre-training orders (MAE→VoCo vs. VoCo→MAE), and further investigated the impact of batch size, weight decay, and dataset filtering (full vs. modality-selected).
-Through these experiments, we derived the current results reported below.
+Based on these experiments, we obtained the results reported below.
 
 ## Environment
 **GPU:** NVIDIA RTX A6000 (NVIDIA TITAN RTX)  
