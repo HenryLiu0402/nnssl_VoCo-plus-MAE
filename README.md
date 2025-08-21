@@ -69,5 +69,6 @@ nnssl_train 745 onemmiso \
 ```
 
 ## License
-This project is based on [nnssl (MIC-DKFZ)](https://github.com/MIC-DKFZ/nnssl)
-and distributed under the [Apache License 2.0](LICENSE).
+This project is based on [nnssl (MIC-DKFZ)](https://github.com/MIC-DKFZ/nnssl/tree/openneuro).  
+It is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE).
+
