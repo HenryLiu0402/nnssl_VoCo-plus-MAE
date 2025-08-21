@@ -18,7 +18,7 @@ Based on these experiments, we obtained the results reported below.
 ## Pretraining Strategy
 Our final pretraining strategy consists of a two-stage pipeline:  
 ### Stage 1: VoCo Pretraining (500 epochs, all modalities)
-We first apply Volume Contrastive Learning (VoCo) on the full OpenMind dataset, including all available MRI modalities.
+We first apply Volume Contrastive Learning (VoCo) on the full [OpenMind Dataset](https://huggingface.co/datasets/AnonRes/OpenMind), including all available MRI modalities.
 This allows the model to learn from a broad range of contrasts, which maximizes representation diversity and stability, and improves generalization, especially for classification tasks, through contrastive learning.
 
 ### Stage 2: MAE Pretraining (500 epochs, filtered modalities)
