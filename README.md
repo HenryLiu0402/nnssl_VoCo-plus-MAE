@@ -30,18 +30,19 @@ By focusing on key modalities, we reduce noise from less common or unrelated seq
 
 ## Hyperparameter Settings
 ### For VoCo pre-training stage:  
-batch_size = 8  
-initial_lr = 1e-2  
-weight_decay = 3e-5  
-num_epochs = 500  
+batch size = 8  
+initial learning rate = 1e-2  
+weight decay = 3e-5  
+training epochs = 500  
 
 ### For MAE pre-training stage:  
-batch_size = 4  
-initial_lr = 1e-2  
-patch_size = (160, 160, 160)  
+batch size = 4  
+initial learning rate = 1e-2  
+patch size = (160, 160, 160)  
 mask ratio: 0.75  
-num_epochs = 500  
+training epochs = 500  
 filtered modalities: T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, DWI
+
 
 ## Example
 
