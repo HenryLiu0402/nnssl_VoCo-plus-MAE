@@ -49,6 +49,7 @@ filtered modalities: T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, DWI
 export nnssl_raw=/NFS/dataset/openmind/OpenMind/nnssl_raw
 export nnssl_preprocessed=/NFS/dataset/openmind/OpenMind/nnssl_preprocessed
 export nnssl_results=/NFS/dataset/openmind/OpenMind/nnssl_results
+#check if the environment variable is set
 echo $nnssl_raw
 echo $nnssl_preprocessed
 echo $nnssl_results
