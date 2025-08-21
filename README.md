@@ -8,7 +8,7 @@ For this purpose, we explored two SSL methods: Masked Autoencoder (MAE), which s
 We compared their individual performance, different pre-training orders (MAE→VoCo vs. VoCo→MAE), and further investigated the impact of batch size, weight decay, and dataset filtering (full vs. modality-selected).
 Based on these experiments, we obtained the results reported below.
 
-## Environment
+## Our Environment
 **GPU:** NVIDIA RTX A6000 (NVIDIA TITAN RTX)  
 **RAM:** 128G (64G)  
 **Python:** 3.10.12  
