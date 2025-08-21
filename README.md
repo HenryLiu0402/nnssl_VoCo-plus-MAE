@@ -1,7 +1,7 @@
 # nnssl_VoCo-plus-MAE
 NTUST_EE304 @[SSL3D Challenge](https://ssl3d-challenge.dkfz.de/home)  
 ResEnc-L network architecture
----
+
 ## Description
 We aim to balance performance across segmentation and classification tasks.
 For this purpose, we explored two SSL methods: Masked Autoencoder (MAE), which shows strong performance in segmentation tasks, and Volume Contrastive Learning (VoCo), which is more effective in classification settings.
