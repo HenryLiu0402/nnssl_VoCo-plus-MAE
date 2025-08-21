@@ -1,11 +1,11 @@
 # nnssl_VoCo-plus-MAE
 NTUST_EE304 @[SSL3D Challenge](https://ssl3d-challenge.dkfz.de/home)  
 ResEnc-L network architecture
-
+---
 ## Description
 We aim to balance performance across segmentation and classification tasks.
 For this purpose, we explored two SSL methods: Masked Autoencoder (MAE), which shows strong performance in segmentation tasks, and Volume Contrastive Learning (VoCo), which is more effective in classification settings.
-We compared their individual performance, different pre-training orders (MAE→VoCo vs. VoCo→MAE), and further investigated the impact of batch size, weight decay, and dataset filtering (full vs. modality-selected).
+We compared their individual performance, different pretraining orders (MAE→VoCo vs. VoCo→MAE), and further investigated the impact of batch size, weight decay, and dataset filtering (full vs. modality-selected).
 Based on these experiments, we obtained the results reported below.
 
 ## Our Environment
@@ -23,7 +23,7 @@ This allows the model to learn from a broad range of contrasts, which maximizes 
 
 ### Stage 2: MAE Pretraining (500 epochs, filtered modalities)
 
-We then continue with Masked Autoencoder (MAE) pretraining on a filtered subset of modalities, **including T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, DWI**, 
+We then continue with Masked Autoencoder (MAE) pretraining on a filtered subset of modalities, **including T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, and DWI**, 
 which are most relevant to downstream segmentation and classification tasks.
 MAE promotes fine-grained feature learning by reconstructing masked inputs, which better supports the requirements of segmentation.  
 By focusing on key modalities, we reduce noise from less common or unrelated sequences, allowing the model to concentrate its representation capacity on the most task-relevant contrasts.
