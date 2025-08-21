@@ -1,5 +1,5 @@
 # nnssl_VoCo-plus-MAE
-NTUST_EE304 @SSL3D Challenge  
+NTUST_EE304 @[SSL3D Challenge](https://ssl3d-challenge.dkfz.de/home)  
 ResEnc-L network architecture
 
 ## Description
