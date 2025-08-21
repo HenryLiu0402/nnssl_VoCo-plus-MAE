@@ -23,7 +23,7 @@ This allows the model to learn from a broad range of contrasts, which maximizes 
 
 ### Stage 2: MAE Pretraining (500 epochs, filtered modalities)
 
-We then continue with Masked Autoencoder (MAE) pretraining on a filtered subset of modalities **(T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, DWI)**, which are most relevant to downstream segmentation and classification tasks.
+We then continue with Masked Autoencoder (MAE) pretraining on a filtered subset of modalities, **including T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, DWI**, which are most relevant to downstream segmentation and classification tasks.
 MAE promotes fine-grained feature learning by reconstructing masked inputs, which better supports the requirements of segmentation.  
 By focusing on key modalities, we reduce noise from less common or unrelated sequences, allowing the model to concentrate its representation capacity on the most task-relevant contrasts.
 
